@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GameHub — Upload & Download Games</title>
+  <link rel="icon" href="data:,">
+  <!-- Google font for nicer typography (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo">GamePlaze</h1>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button id="btn-upload-panel" class="btn btn-secondary">Upload Game</button>
+        <div class="search-wrap">
+          <input id="search" type="search" placeholder="Search games, genres, version..." aria-label="Search games">
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-grid">
+    <section class="panel upload-panel" id="upload-panel" aria-labelledby="upload-title">
+      <h2 id="upload-title">Upload Game ✨</h2>
+
+      <form id="upload-form" class="upload-form" autocomplete="off" novalidate>
+        <div class="dropzone" id="dropzone" tabindex="0" aria-label="Drop files here or click to select">
+          <input id="file-input" type="file" accept="*/*" />
+          <div class="drop-inner">
+            <svg height="48" viewBox="0 0 24 24" width="48" fill="currentColor" aria-hidden="true">
+              <path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.34v4h4.66V9h3.34L12 2z"/>
+            </svg>
+            <p class="muted">Drop your game package here (zip/rar/exe) — or click to choose</p>
+            <p class="hint">Max file size: <span id="max-size-label">200 MB</span></p>
+          </div>
+        </div>
+
+        <div class="meta-grid">
+          <label>
+            <span>Game Title</span>
+            <input id="title" name="title" required placeholder="Enter game title">
+          </label>
+          <label>
+            <span>Genre</span>
+            <select id="genre" name="genre">
+              <option>Action</option>
+              <option>Adventure</option>
+              <option>RPG</option>
+              <option>Strategy</option>
+              <option>Puzzle</option>
+              <option>Simulation</option>
+            </select>
+          </label>
+          <label>
+            <span>Version</span>
+            <input id="version" name="version" placeholder="1.0.0">
+          </label>
+          <label class="full">
+            <span>Description</span>
+            <textarea id="description" name="description" rows="3" placeholder="Short description..."></textarea>
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Upload Game</button>
+          <button type="button" id="btn-clear-form" class="btn btn-ghost">Reset</button>
+        </div>
+
+        <div id="upload-progress" class="upload-progress hidden" aria-live="polite">
+          <div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div>
+          <div class="progress-meta">0%</div>
+        </div>
+      </form>
+
+      <div class="tips">
+        <strong>Tips:</strong>
+        <ul>
+          <li>Use clear titles and version numbers (e.g., <code>1.2.0</code>).</li>
+          <li>Files are stored locally in your browser (IndexedDB).</li>
+          <li>For production or sharing across users you’ll need a backend — I can provide one if you want.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="panel library-panel" aria-labelledby="library-title">
+      <div class="panel-head">
+        <h2 id="library-title">Game Library 🎮</h2>
+
+        <div class="controls">
+          <label>
+            Sort
+            <select id="sort">
+              <option value="added_desc">Newest</option>
+              <option value="added_asc">Oldest</option>
+              <option value="title_asc">Title A→Z</option>
+              <option value="title_desc">Title Z→A</option>
+              <option value="size_desc">Size ↓</option>
+              <option value="size_asc">Size ↑</option>
+            </select>
+          </label>
+
+          <label>
+            Filter genre
+            <select id="filter-genre">
+              <option value="">All</option>
+              <option>Action</option>
+              <option>Adventure</option>
+              <option>RPG</option>
+              <option>Strategy</option>
+              <option>Puzzle</option>
+              <option>Simulation</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div id="library-list" class="library-list" role="list" aria-live="polite"></div>
+
+      <div class="pagination" id="pagination" aria-hidden="true"></div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>Made with ❤️ — GameHub • Client-side demo • IndexedDB storage</small>
+    </div>
+  </footer>
+
+  <!-- Modal template for confirm -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-panel">
+      <h3 id="modal-title">Confirm</h3>
+      <p id="modal-body">Are you sure?</p>
+      <div class="modal-actions">
+        <button id="modal-cancel" class="btn btn-ghost">Cancel</button>
+        <button id="modal-confirm" class="btn btn-danger">Yes, delete</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

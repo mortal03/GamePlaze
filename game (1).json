@@ -1,0 +1,98 @@
+[
+  {
+    "id": "g001",
+    "title": "Starblade",
+    "genre": "Action",
+    "version": "1.4.2",
+    "description": "Fast-paced sci-fi shooter with neon battleships and intense boss fights.",
+    "size": 24576000,
+    "thumb": "https://images.unsplash.com/photo-1610893522912-156d4ad28e80?auto=format&fit=crop&w=600&q=80",
+    "download": "https://example.com/starblade.zip",
+    "downloads": 185,
+    "date": "2024-09-18"
+  },
+  {
+    "id": "g002",
+    "title": "Mystic Trails",
+    "genre": "Adventure",
+    "version": "2.1.0",
+    "description": "Explore ancient forests, solve puzzles and uncover magical secrets.",
+    "size": 41287680,
+    "thumb": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=600&q=80",
+    "download": "https://example.com/mystic_trails.zip",
+    "downloads": 267,
+    "date": "2024-08-02"
+  },
+  {
+    "id": "g003",
+    "title": "Tiny Tactician",
+    "genre": "Strategy",
+    "version": "3.0.1",
+    "description": "A tactical battlefield simulator with hundreds of unit combinations.",
+    "size": 35840000,
+    "thumb": "https://images.unsplash.com/photo-1612197528413-1f87deaed752?auto=format&fit=crop&w=600&q=80",
+    "download": "https://example.com/tiny_tactician.zip",
+    "downloads": 542,
+    "date": "2024-10-03"
+  },
+  {
+    "id": "g004",
+    "title": "BlockRun Infinity",
+    "genre": "Puzzle",
+    "version": "1.0.6",
+    "description": "A colorful puzzle runner with infinite levels and leaderboard challenges.",
+    "size": 17825792,
+    "thumb": "https://images.unsplash.com/photo-1610491541110-7ce3e8b2be6a?auto=format&fit=crop&w=600&q=80",
+    "download": "https://example.com/blockrun_infinity.zip",
+    "downloads": 94,
+    "date": "2024-07-22"
+  },
+  {
+    "id": "g005",
+    "title": "Shadow Zero",
+    "genre": "RPG",
+    "version": "0.9.9",
+    "description": "A dark fantasy RPG with dynamic combat and an evolving storyline.",
+    "size": 52428800,
+    "thumb": "https://images.unsplash.com/photo-1558980813-6f0c94958bb6?auto=format&fit=crop&w=600&q=80",
+    "download": "https://example.com/shadow_zero.zip",
+    "downloads": 388,
+    "date": "2024-11-30"
+  },
+  {
+    "id": "g006",
+    "title": "Cyber Drift",
+    "genre": "Racing",
+    "version": "1.3.0",
+    "description": "Futuristic neon racing with customizable hovercars and online time trials.",
+    "size": 28901376,
+    "thumb": "https://images.unsplash.com/photo-1607966279823-3f29446c8cd2?auto=format&fit=crop&w=600&q=80",
+    "download": "https://example.com/cyber_drift.zip",
+    "downloads": 191,
+    "date": "2024-10-12"
+  },
+  {
+    "id": "g007",
+    "title": "Orbital Miner",
+    "genre": "Simulation",
+    "version": "2.0.0",
+    "description": "Build mining colonies across planets and automate space production chains.",
+    "size": 36700160,
+    "thumb": "https://images.unsplash.com/photo-1607257521859-4a8eb509d9a2?auto=format&fit=crop&w=600&q=80",
+    "download": "https://example.com/orbital_miner.zip",
+    "downloads": 152,
+    "date": "2024-06-16"
+  },
+  {
+    "id": "g008",
+    "title": "Blade City Online",
+    "genre": "Action",
+    "version": "4.2.5",
+    "description": "Open-world cyberpunk action game with PvP arenas and boss raids.",
+    "size": 73400320,
+    "thumb": "https://images.unsplash.com/photo-1505839673365-e3971f8d9184?auto=format&fit=crop&w=600&q=80",
+    "download": "https://example.com/blade_city_online.zip",
+    "downloads": 640,
+    "date": "2024-12-01"
+  }
+]
